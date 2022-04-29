@@ -1,0 +1,414 @@
+    1  sudo apt-get install dkms
+    2  apt-get install build-essential
+    3  sudo apt-get install build-essential
+    4  sudo apt-get install git
+    5  sudo apt-get install sqlite3
+    6  sudo apt-get install python
+    7  wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh
+    8  ls
+    9  bash Miniconda2-latest-Linux-x86_64.sh 
+   10  ls
+   11  rm Miniconda2-latest-Linux-x86_64.sh 
+   12  ls
+   13  sudo apt-cache search R
+   14  sudo apt-get install R
+   15  sudo apt-cache search R | grep sta
+   16  sudo apt-get install r-base
+   17  R
+   18  ls
+   19  rm -rf Documents Music Pictures Public Templates Videos
+   20  ls
+   21  rm examples.desktop 
+   22  ls
+   23  git clone https://github.com/BushmanLab/INSPIIRED
+   24  ls
+   25  cd INSPIIRED/
+   26  ls
+   27  cd bin/
+   28  nano setupINSPIIRED.R 
+   29  sudo Rscript setupINSPIIRED.R 
+   30  sudo R
+   31  sudo Rscript setupINSPIIRED.R 
+   32  sudo R
+   33  sudo -s
+   34  R
+   35  apt-cache search RCurl
+   36  apt-get install r-cr
+   37  apt-get install r-mysql
+   38  apt-cache search r-rmysql
+   39  apt-cache search rmysql
+   40  apt-get install r-cran-dbi r-cran-rmysql
+   41  sudo apt-get install zlib1g-dev 
+   42  ls
+   43  Rscript setupINSPIIRED.R 
+   44  ls
+   45  apt-get install libssl-dev
+   46  Rscript setupINSPIIRED.R 
+   47  apt-get install libssl-dev
+   48  apt-get install libssh2-devel
+   49  apt-cache search libssh2-devel
+   50  apt-cache search libssh2
+   51  apt-get install libssh2-1-dev
+   52  ls
+   53  ls ../..
+   54  Rscript setupINSPIIRED.R 
+   55  R
+   56  apt-get install xml2-config
+   57  apt-cache search xml2-config
+   58  sudo apt-get install r-cran-xml
+   59  apt-get install libmariadb-client-lgpl-dev 
+   60  apt-cache search cran | grep DBI
+   61  apt-get install r-cran-rmysql
+   62  apt-cache search cran | grep curl
+   63  apt-get install r-cran-rcurl
+   64  Rscript setupINSPIIRED.R 
+   65  sudo apt-get install libxml2-dev
+   66  ls ~/
+   67  Rscript setupINSPIIRED.R 
+   68  nano setupINSPIIRED.R 
+   69  R
+   70  more setupINSPIIRED.R 
+   71  R
+   72  ls
+   73  nano setupINSPIIRED.R 
+   74  Rscript setupINSPIIRED.R 
+   75  R
+   76  ls
+   77  which curl
+   78  ls
+   79  ls R/
+   80  ls
+   81  rm -rf R
+   82  sudo rm -rf R
+   83  ls
+   84  sudo apt-cache search curl
+   85  which curl
+   86  sudo apt-get install curl
+   87  sudo apt-cache search XML
+   88  sudo apt-get install libcurl4-gnutls-dev
+   89  sudo apt-get autoclean
+   90  sudo apt-get clean
+   91  sudo apt-get autoremove
+   92  sudo apt-get install gtkorphan
+   93  ls
+   94  sudo gtkorphan
+   95  library('devtools')
+   96  R
+   97  ls /media/
+   98  ls /media/sf_data/
+   99  cp /media/sf_data/BSgenome.Hsapiens.UCSC.hg18_1.3.1000.tar.gz ./
+  100  ls
+  101  R CMD INSTALL BSgenome.Hsapiens.UCSC.hg18_1.3.1000.tar.gz 
+  102  R
+  103  more bin/setupINSPIIRED.R 
+  104  R
+  105  R CMD INSTALL BSgenome.Hsapiens.UCSC.hg18_1.3.1000.tar.gz 
+  106  more bin/setupINSPIIRED.R 
+  107  R
+  108  cd ..
+  109  ls
+  110  cd INSPIIRED/
+  111  nano bin/setupINSPIIRED.R 
+  112  Rscript bin/setupINSPIIRED.R --noRsetup
+  113  more bin/setupINSPIIRED.R 
+  114  nano readme
+  115  ls
+  116  ls INSPIIRED/
+  117  ls inputs
+  118  ls
+  119  cd INSPIIRED/
+  120  ls inputs/
+  121  more bin/setupINSPIIRED.R 
+  122  sudo -s
+  123  ls
+  124  cd O
+  125  cd INSPIIRED/
+  126  more readme 
+  127  wget http://www.bushmanlab.org/assets/doc/INSPIIRED_EpigeneticData.tar
+  128  ls
+  129  rm BSgenome.Hsapiens.UCSC.hg18_1.3.1000.tar.gz INSPIIRED_EpigeneticData.tar 
+  130  ls
+  131  more bin/setupINSPIIRED.R 
+  132  Rscript bin/setupINSPIIRED.R --noRsetup
+  133  ls
+  134  ls components/
+  135  rm -rf components/*
+  136  sudo rm -rf components/*
+  137  ls components/
+  138  ls
+  139  Rscript bin/setupINSPIIRED.R --noRsetup
+  140  ls
+  141  rm readme 
+  142  ls
+  143  sudo chmod -R 755 ./
+  144  sudo chown inspiired -R 755 ./
+  145  sudo chown inspiired -R  ./
+  146  ls
+  147  cd inputs/demoDataSet/
+  148  ls
+  149  ls -al
+  150  nano INSPIIRED.yml 
+  151  ls
+  152  more sampleData.csv 
+  153  ls
+  154  cd ..
+  155  ls
+  156  rm -rf demoDataSet/
+  157  more ../bin/setupINSPIIRED.R 
+  158  wget http://www.bushmanlab.org/assets/doc/INSPIIRED_demoDataSet.tar
+  159  ls
+  160  tar xvf INSPIIRED_demoDataSet.tar 
+  161  ls
+  162  cd demoDataSet/
+  163  ls
+  164  ln -s ../../INSPIIRED.yml INSPIIRED.yml
+  165  ls
+  166  nano INSPIIRED.yml 
+  167  ls
+  168  sudo apt-get install qsub
+  169  sudo apt-cache search qsub
+  170  apt-get install torque-server torque-client torque-mom torque-pam
+  171  sudo apt-get install torque-server torque-client torque-mom torque-pam
+  172  which qsub
+  173  cd INSPIIRED/
+  174  ls
+  175  ls databases/
+  176  cd inputs/
+  177  ls
+  178  rm -rf INSPIIRED_demoDataSet.tar 
+  179  ls
+  180  ls demoDataSet/
+  181  cd
+  182  du -sh INSPIIRED/
+  183  cd INSPIIRED/inputs/validationDataSet/
+  184  ls
+  185  nano INSPIIRED.yml 
+  186  Rscript ../../components/intSiteCaller/intSiteCaller.R -j a
+  187  wget "http://google.com'
+  188  wget "http://google.com"
+  189  cd /usr/local
+  190  ls
+  191  wget https://users.soe.ucsc.edu/~kent/src/blatSrc35.zip
+  192  ls
+  193  unzip blatSrc35.zip 
+  194  ls
+  195  mkdir blat35
+  196  cd blatSrc/
+  197  ls
+  198  nano makefile 
+  199  ls
+  200  nano README 
+  201  echo $MACHTYPE
+  202  nano README 
+  203  ls lib/
+  204  cd lib/
+  205  mkdir $MACHTYPE
+  206  ls
+  207  cd ..
+  208  nano README 
+  209  cd bin
+  210  ls
+  211  nano README 
+  212  mkdir ~/bin/$MACHTYPE
+  213  mkdir ~/bin
+  214  ls ~/
+  215  mkdir ~/bin/$MACHTYPE
+  216  ls
+  217  make
+  218  ls lib/
+  219  echo $MACHTYPE
+  220  export MACHTYPE=x86_64
+  221  echo $MACHTYPE
+  222  mkdir ~/bin/x86_64
+  223  make
+  224  ls ~/
+  225  ls ~/bin/
+  226  ls ~/bin/x86_64
+  227  ls
+  228  ls blat/
+  229  cd ..
+  230  ls
+  231  cd blat35/
+  232  cp ~/bin/x86_64/* ./
+  233  ls
+  234  ./blat 
+  235  ls
+  236  ln -s /usr/local/blat35/blat /usr/local/bin/blat
+  237  which blat
+  238  exit
+  239  cd INSPIIRED/inputs/validationDataSet/
+  240  ls
+  241  tail intSiteCaller.log 
+  242  cd ../demoDataSet/
+  243  ls
+  244  more start 
+  245  tial intSiteCaller.log 
+  246  tail intSiteCaller.log 
+  247  sudo apt-cache search blat
+  248  sudo -s
+  249  ls
+  250  cd INSPIIRED/
+  251  cd inputs/
+  252  cd validationDataSet/
+  253  ls
+  254  Rscript ../../components/intSiteCaller/intSiteCaller.R -j a
+  255  ls
+  256  sudo apt-get install biopython
+  257  sudo apt-cache search biopython
+  258  sudo apt-get install python-biopython
+  259  ls
+  260  Rscript ../../components/intSiteCaller/intSiteCaller.R -j a
+  261  ls
+  262  Rscript ../../components/intSiteCaller/check_stats.R > o
+  263  nano o
+  264  cd ..
+  265  ls
+  266  cd demoDataSet/
+  267  ls
+  268  nano run.pl
+  269  ls
+  270  nano INSPIIRED.yml 
+  271  ls
+  272  chmod 755 run.pl 
+  273  ls
+  274  ./run.pl 
+  275  ls
+  276  cd INSPIIRED/
+  277  ls
+  278  cd inputs/
+  279  ls
+  280  cd demoDataSet/
+  281  ls
+  282  rn *.done
+  283  rm *.done
+  284  ls
+  285  rm GTSP0*
+  286  rm -rf GTSP0*
+  287  ls
+  288  rm *.RData
+  289  ls
+  290  rm hg18.2bit 
+  291  ls
+  292  cd Data/
+  293  ls
+  294  rm -rf  *.fasta *.done demultiplexedReps 
+  295  ls
+  296  cd ..
+  297  ls
+  298  rm -rf logs/
+  299  ls
+  300  cd ..
+  301  ls
+  302  cd validationDataSet/
+  303  ls
+  304  rm --rf clone* *.RData logs Data/demultiplexedReps Data/*.done Data/*.fasta
+  305  rm -rf clone* *.RData logs Data/demultiplexedReps Data/*.done Data/*.fasta
+  306  ls
+  307  rm error.txt hg18.2bit  intSiteCaller.log o
+  308  ls
+  309  ls Data/
+  310  cd ..
+  311  ls
+  312  cd demoDataSet/
+  313  ls
+  314  rm intSiteCaller.log 
+  315  rm start 
+  316  ls
+  317  cd ..
+  318  ls
+  319  rm cleanup.sh 
+  320  ls
+  321  cd ..
+  322  ls
+  323  cd ..
+  324  ls
+  325  wget https://repo.continuum.io/miniconda/Miniconda3/latest/Linux/x86_64.sh
+  326  wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+  327  bash Miniconda3-latest-Linux-x86_64.sh
+  328  source ~/.bashrc
+  329  git clone -b INSPIIRED-deployment https://github.com/BushmanLab/INSPIIRED
+  330  cd INSPIIRED
+  331  export INSPIIRED=$(pwd)
+  332  ~/miniconda3/bin/conda update conda
+  333  git clone -b INSPIIRED-deployment https://github.com/BushmanLab/INSPIIRED
+  334  ls
+  335  cd ..
+  336  ls
+  337  git clone -b INSPIIRED-deployment https://github.com/BushmanLab/INSPIIRED
+  338  cd INSPIIRED
+  339  export INSPIIRED=$(pwd)
+  340  ~/miniconda3/bin/conda update conda
+  341  ~/miniconda3/bin/conda env create -f bin/INSPIIRED.conda.yml
+  342  CONDA_RESTORE_FREE_CHANNEL=1 ~/miniconda3/bin/conda env create -f bin/INSPIIRED.conda.yml
+  343  source ~/miniconda3/bin/activate INSPIIREDv2
+  344  Rscript bin/setupR.R
+  345  Rscript bin/setupINSPIIRED.R
+  346  Rscript $INSPIIRED/components/intSiteCaller/intSiteCaller.R -j demo
+  347  ls
+  348  cd INSP_LOCAL/
+  349  l
+  350  ls
+  351  cd inputs/
+  352  ls
+  353  cd ..
+  354  ls
+  355  cd ..
+  356  ls
+  357  cd ..
+  358  ls
+  359  cd media/sf_INSPIIRED_SHARED/
+  360  ls
+  361  htop
+  362  sudo apt install htop
+  363  htop
+  364  cd INSP_LOCAL/
+  365  pwd
+  366  ls
+  367  pwd
+  368  cd..
+  369  cd ..
+  370  mkdir NEW
+  371  cd NEW/
+  372  git clone -b INSPIIRED-deployment https://github.com/BushmanLab/INSPIIRED
+  373  ls
+  374  source ~/miniconda3/bin/activate INSPIIREDv2
+  375  Rscript bin/setupR.R
+  376  cd INSPIIRED/
+  377  Rscript bin/setupR.R
+  378  cd NEW/
+  379  ls
+  380  cd INSPIIRED/
+  381  export INSPIIRED=$(pwd)
+  382  echo $INSPIIRED
+  383  source activate INSPIIRED
+  384  c 
+  385  conda info //envs
+  386  conda info --envs
+  387  source activate INSPIIREDv2
+  388  Rscript bin/setup.R
+  389  ls
+  390  Rscript bin/setupR.R 
+  391  Rscript bin/setupINSPIIRED.R 
+  392  conda env list
+  393  conda activate INSPIIREDv2
+  394  ls
+  395  echo $PATH
+  396  intSiteCaller
+  397  intSiteCaller.R
+  398  ls
+  399  cd bin/
+  400  ls
+  401  cd x86_64-pc-linux-gnu/
+  402  ls
+  403  cd..
+  404  cd ..
+  405  ls
+  406  cd x86_64
+  407  ls
+  408  cd ..
+  409  locate intSiteCaller
+  410  locate intSiteCaller.R
+  411  /home/inspiired/NEW/INSPIIRED/components/intSiteCaller/intSiteCaller.R
+  412  historyy
+  413  history
+
