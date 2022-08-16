@@ -1,0 +1,62 @@
+#Download base image ubuntu 16.04
+FROM ubuntu:16.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Update Software repository and Install
+RUN apt-get update && apt-get install -y --no-install-recommends apt-utils \
+    build-essential curl gfortran gfortran-5 git libreadline-dev\
+    libcairo2-dev libcurl4-gnutls-dev libfontconfig1-dev \
+    libfribidi-dev libharfbuzz-dev libhdf5-dev liblapack-dev \
+    libmariadb-client-lgpl-dev libopenblas-base libopenblas-dev \
+    libpng-dev libpq-dev libssh2-1-dev libssl-dev \
+    libxml2-dev nano pkg-config python python-biopython \
+    software-properties-common sqlite3 wget zlib1g-dev \
+    libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev
+RUN apt-get install -y --reinstall tar
+RUN apt-get install -y torque-server torque-client torque-mom torque-pam
+RUN apt-get -y clean 
+RUN apt-get -y autoremove 
+
+WORKDIR /root
+RUN wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh
+RUN bash Miniconda3-latest-Linux-x86_64.sh -b && rm -f Miniconda3-latest-Linux-x86_64.sh
+RUN echo 'export PATH=/root/miniconda3/bin/:$PATH' >> /root/.bashrc 
+RUN /root/miniconda3/bin/conda config --add channels conda-forge
+RUN /root/miniconda3/bin/conda config --add channels bioconda
+RUN /root/miniconda3/bin/conda config --add channels r
+RUN /root/miniconda3/bin/conda config --set restore_free_channel true
+
+# get the Git repository
+WORKDIR /root
+RUN git clone -b INSPIIRED-deployment https://github.com/BushmanLab/INSPIIRED
+WORKDIR /root/INSPIIRED/bin/
+RUN sed -i "s/- jpeg=9b=2/#- jpeg==9b=2/" INSPIIRED.conda.yml
+
+RUN . /root/.bashrc && \
+    /root/miniconda3/bin/conda init bash && \
+    /root/miniconda3/bin/conda env create -f INSPIIRED.conda.yml 
+
+ENV conda /root/miniconda3/bin/conda
+ENV bashrc /root/.bashrc
+
+RUN $conda init && . $bashrc && conda activate INSPIIREDv2 && conda env list
+
+COPY SetupR_hg19.R /root/INSPIIRED/bin/
+RUN $conda init && . $bashrc && conda activate INSPIIREDv2 && R --version
+WORKDIR /root/INSPIIRED/inputs
+CMD wget http://www.bushmanlab.org/assets/doc/INSPIIRED_demoDataSet.tar
+CMD tar xvf INSPIIRED_demoDataSet.tar
+CMD cd demoDataSet/
+RUN ln -s ../../INSPIIRED.yml INSPIIRED.yml
+RUN ln -s /bin/tar /bin/gtar
+RUN $conda init && . $bashrc && conda activate INSPIIREDv2 && Rscript /root/INSPIIRED/bin/setupR.R
+WORKDIR /root/INSPIIRED/
+
+RUN $conda init && . $bashrc && conda activate INSPIIREDv2 && Rscript /root/INSPIIRED/bin/setupINSPIIRED.R
+RUN $conda init && . $bashrc && conda activate INSPIIREDv2 && Rscript /root/INSPIIRED/bin/SetupR_hg19.R
+
+# Activate conda environment on startup
+RUN echo "export PATH=/root/miniconda3/bin/conda:$PATH" >> /root/.bashrc
+RUN echo "conda activate INSPIIREDv2" >> /root/.bashrc
+SHELL ["/bin/bash"]
